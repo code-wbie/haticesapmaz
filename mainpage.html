@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HaticeSapmaz</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="mainpage.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="https://erkencocukluk.wordpress.com/">Blog</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="brand">
+                    <div>HATICE SAPMAZ</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="portfolio-items-wrapper">
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/bounlogo.png);"></div>
+
+                    <div class="img-text-wrapper">
+                        <div class="subtitle">
+                            I received my undergraduate degree at Preschool Education program of Bogazici University. 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/beykoz.jpg);"></div>
+
+                    <div class="img-text-wrapper">
+
+                        <div class="subtitle">
+                            Living on the Asian continent, I did enjoy the parks of Beykoz.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/kalamis.jpg);"></div>
+
+                    <div class="img-text-wrapper">
+
+
+                        <div class="subtitle">
+                            Kalamis reminds me of Cesme-Izmir with its marina and all.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/kandilli.jpg);"></div>
+
+                    <div class="img-text-wrapper">
+
+
+                        <div class="subtitle">
+                            One of the best perks of being a Bogazici student has been its Kandilli campus: nature,
+                            nature, nature. Embrace me.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/grenoble.jpg);"></div>
+
+                    <div class="img-text-wrapper">
+
+
+                        <div class="subtitle">
+                            I try to enjoy views outside Turkey, as well. As this one of Grenoble.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item-wrapper">
+                    <div class="portfolio-img-background" style="background-image: url(images/cats.jpg);"></div>
+
+                    <div class="img-text-wrapper">
+
+                        <div class="subtitle">
+                            In a previous life, cats used to rule over us. That must be the reason they often look down
+                            on us humans...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+   const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper')
+
+   portfolioItems.forEach(portfolioItem => {
+        portfolioItem.addEventListener('mouseover', () => {
+           console.log(portfolioItem.childNodes[1].classList);
+           portfolioItem.childNodes[1].classList.add('img-darken');
+        })
+
+        portfolioItem.addEventListener('mouseout', () => {
+           portfolioItem.childNodes[1].classList.remove('img-darken');
+        })
+
+   })
+</script>
+</html>
